@@ -1,8 +1,7 @@
-# formater-geotiff-visualizer-vjs
-A webcomponent to visualize your geotiff file
+# formater-gep-metadata-viewer-vjs
+A webcomponent to visualize metadata and products form gep platform
 
 
-![Screenshot](/images/screenshot2.png)
 
 
 
@@ -11,30 +10,9 @@ In the body page add the component and the script like this:
 
 ### To display a list of geotiff
 ```html
-<geotiff-visualizer jsonurl="url_to_json" lang="en" band="2"></geotiff-visualizer>
-<script src="https://url_to/formater-geotiff-visualizer-vjs.js"></script>
+<formater-gep-viewer gep-url="url-to-gep-dataset"></formater-gep-viewer>
+<script src="https://cdn.jsdelivr.net/gh/terresolide/formater-gep-metadata-viewer-vjs@0.0.1/dist/formater-gep-metadata-viewer-vjs.js"></script>
 ```
 Where 
- * `jsonurl` is a json file describing your geotiff list,  (specifications @inprogress)  
- * `band` integer beginning by 1. The band to display first (optional)
- * `lang` is the code language `fr` or `en` (optionnal)
- * `attribution` is a boolean to display or hide the attribution line  (optionnal)
+ * `gep-url` is the url to products metadata  
 
- ### To display the interface with a file input area
- ```html
-<geotiff-visualizer max-files="3" band="2"></geotiff-visualizer>
-<script src="https://url_to/formater-geotiff-visualizer-vjs.js"></script>
-```
-
-Where 
- * `max-files` the maximum number of files the user can load (optional)
- * `band` integer beginning by 1. The band to display first (optional)
- * `lang` is the code language `fr` or `en` (optionnal)
- * `attribution` is a boolean to display or hide the attribution line  (optionnal)
- 
-### 2 optional props specific to our app:
-#### Before publication
- * `token` 
- * `dirurl` is the dir url where are listed subswath 
-#### After publication
- * `zenodo` the record identifier in zenodo plateform
