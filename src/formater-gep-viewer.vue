@@ -1,6 +1,5 @@
 <template>
  <span>
-   <div>MON COMPOSANT</div>
    <div v-for="item in entries" v-html="item"></div>
  </span>
 </template>
